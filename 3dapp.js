@@ -20,8 +20,11 @@ function setup(){
 function draw(){
 
   background(201,32,12);
+
   epR += 0.1;
   epZ =map(mouseY, 0, height, 0, -10);
+
+  pointLight(255,255,255, mouseX,0,400);
   renderEPlanet();
 
 }
@@ -29,8 +32,12 @@ function draw(){
 function renderEPlanet(){
 
   texture(pTex);
+  noStroke();
+//   ambientMaterial(0,255,0);
+//   specularMaterial(0,255,0);
+
   translate(epX, epY, epZ);
   rotateY(radians(epR));
-  sphere(100);
+  sphere(140, 240, 160);
 
 }
