@@ -6,3 +6,5 @@ Testing WebGL stuff
     + [GitHub: Getting started with WebGL in p5](https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5)
     + [cdnjs: p5 library](https://cdnjs.com/libraries/p5.js)
   * [YouTube: 3D Javascript with WEBGL: tutorial 2](https://www.youtube.com/watch?v=VJGm0sT6EKM)
+  * [YouTube: 3D Javascript with WEBGL: tutorial 3](https://www.youtube.com/watch?v=Dwylhl_zzXI)
+  * [YouTube: 3D First Person in Javascript](https://www.youtube.com/watch?v=xugp0824AMM)
