@@ -4,6 +4,7 @@ let epX = 0;
 let epY = 0;
 let epZ = 0;
 
+let epR = 0;
 let pTex;
 
 function setup(){
@@ -19,7 +20,8 @@ function setup(){
 function draw(){
 
   background(201,32,12);
-  epZ =map(mouseY, 0, height, 0, -100);
+  epR += 0.1;
+  epZ =map(mouseY, 0, height, 0, -10);
   renderEPlanet();
 
 }
@@ -28,6 +30,7 @@ function renderEPlanet(){
 
   texture(pTex);
   translate(epX, epY, epZ);
-  sphere(200)
+  rotateY(radians(epR));
+  sphere(100);
 
 }
