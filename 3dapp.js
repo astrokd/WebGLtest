@@ -29,8 +29,11 @@ function draw(){
 function renderEPlanet(){
 
   texture(pTex);
+  noStroke();
+//   ambientMaterial(0,255,0);
+
   translate(epX, epY, epZ);
   rotateY(radians(epR));
-  sphere(100);
+  sphere(140);
 
 }
