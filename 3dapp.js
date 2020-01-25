@@ -6,6 +6,7 @@ let epZ = 0;
 
 let epR = 0;
 let pTex;
+let mTex;
 
 function setup(){
 
@@ -13,6 +14,7 @@ function setup(){
   background(51);
 
   pTex = loadImage('img/world.topo.bathy.200412.3x5400x2700.png');
+  mTex = loadImage('img/moonmap1k.jpg');
 
 }
 
@@ -27,6 +29,7 @@ function draw(){
   pointLight(255,255,255, 0,0,400);
   orbitControl();
   renderEPlanet();
+  renderEMoon();
 
 }
 
@@ -34,11 +37,20 @@ function renderEPlanet(){
 
   texture(pTex);
   noStroke();
-//   ambientMaterial(0,255,0);
-//   specularMaterial(0,255,0);
 
   translate(epX, epY, epZ);
   rotateY(radians(epR));
   sphere(140, 240, 160);
+
+}
+
+function renderEMoon(){
+
+  texture(mTex);
+  noStroke();
+
+  rotateY(radians(epR)*2);
+  translate(250, epY, epZ);
+  sphere(28);
 
 }
