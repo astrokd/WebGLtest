@@ -11,7 +11,7 @@ let mTex;
 function setup(){
 
   createCanvas(windowWidth, windowHeight, WEBGL);
-  background(51);
+  // background(1);
 
   pTex = loadImage('img/world.topo.bathy.200412.3x5400x2700.png');
   mTex = loadImage('img/moonmap1k.jpg');
@@ -20,13 +20,16 @@ function setup(){
 
 function draw(){
 
-  background(51);
+  background(16);
 
   epR += 0.1;
   epZ =map(0, 0, height, 0, -10);
 
-  ambientLight(150);
-  pointLight(255,255,255, 0,0,400);
+  // ambientLight(150);
+  pointLight(255,255,255,0,0,300);
+  pointLight(255,255,255,0,0,300);
+  pointLight(255,255,255,0,0,300);
+  // lights();
   orbitControl();
   renderEPlanet();
   renderEMoon();
